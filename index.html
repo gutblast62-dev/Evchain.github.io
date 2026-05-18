@@ -589,8 +589,8 @@ textarea{resize:vertical;min-height:70px;line-height:1.5;}
 //   2. localStorage 'evchain_api_url'  (saved via config panel)
 //   3. EVCHAIN_API_BASE fallback below
 // ============================================
-const EVCHAIN_API_BASE = 'https://evchain-production.up.railway.app';
-
+const EVCHAIN_API_BASE = 'https://evchain-backend-production.up.railway.app';
+  
 function resolveApiBase() {
   const params = new URLSearchParams(window.location.search);
   const paramUrl = params.get('api');
