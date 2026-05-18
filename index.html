@@ -589,7 +589,7 @@ textarea{resize:vertical;min-height:70px;line-height:1.5;}
 //   2. localStorage 'evchain_api_url'  (saved via config panel)
 //   3. EVCHAIN_API_BASE fallback below
 // ============================================
-const EVCHAIN_API_BASE = 'https://evchain-production.up.railway.app/';
+const EVCHAIN_API_BASE = const API_URL = 'https://evchain-production.up.railway.app';
 
 function resolveApiBase() {
   return EVCHAIN_API_BASE;
@@ -609,7 +609,7 @@ async function apiRequest(endpoint, options = {}) {
 
   let response;
   try {
-    response = await fetch(url, { ...options, headers });
+    response = await fetchfetch(`${API_URL}/api/auth/login`, { ... })  
   } catch (networkErr) {
     // Network failure — could be CORS, server down, or no internet
     const msg = networkErr.message || '';
